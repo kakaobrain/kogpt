@@ -6,8 +6,6 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
-KakaoBrain's Pre-Trained Language Models. 
-
 * KoGPT (Korean Generative Pre-trained Transformer)
   * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
