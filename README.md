@@ -12,6 +12,7 @@ KakaoBrain's Pre-Trained Language Models.
   * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
 
+
 ## Hardware requirements
 
 ### GPU
@@ -52,6 +53,7 @@ prompt>
 ## Experiments
 
 ### In-context Few-Shots
+
 | Models        | #params | NSMC (Acc.) | YNAT (F1) | KLUE-STS (F1) |
 |:--------------|--------:|------------:|----------:|--------------:|
 | HyperCLOVA[1] |    1.3B |        83.9 |      58.7 |          60.9 |
@@ -62,6 +64,7 @@ prompt>
 | **Ours**      |    6.0B |        87.8 |  **78.0** |          64.3 |
 
 
+
 ### Finetuning / P-Tuning
 
 | Models                    | #params | method       | NSMC (Acc.) | KorSTS(spearman) |
@@ -70,23 +73,25 @@ prompt>
 | SKT-AI/KoGPT-2 Trinity[3] |    1.2B | `finetuning` |        93.2 |             83.4 |
 | HyperCLOVA[1]             |    1.3B | `p-tuning`   |        91.7 |                - |
 | HyperCLOVA[1]             |   39.0B | `p-tuning`   |        93.0 |                - |
-| **Ours**                  |    135M | `finetuning` |    **95.1** |         **83.0** |
+| **Ours**                  |    135M | `finetuning` |        95.1 |             83.0 |
 | **Ours**                  |    6.0B | `finetuning` |    **95.7** |         **85.3** |
 
 We conducted this experiments using [4], with same hyperparameters.
+
 
 ## Citation
 
 If you apply this library or model to any project and research, please cite our code:
 
 ```
-@article{kakaobrain2021kogpt,
+@misc{kakaobrain2021kogpt,
   title         = {KoGPT: KakaoBrain Korean(hangul) Generative Pre-Training}
   author        = {Ildoo Kim and Gunsoo Han and Jiyeon Ham and Woonhyuk Baek},
   year          = {2021},
   howpublished  = {\url{https://github.com/kakaobrain/kogpt}},
 }
 ```
+
 
 ## Contact
 

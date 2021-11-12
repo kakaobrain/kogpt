@@ -6,10 +6,18 @@ license: cc-by-nc-nd-4.0
 ---
 
 # KoGPT
+[![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
+[![Github: kogpt](https://img.shields.io/badge/Github-kogpt-000000.svg)](https://github.com/kakaobrain/kogpt)
+[![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-KakaoBrain Korean(hangul) Generative Pre-Training Models
-* [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
-* [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
+
+KakaoBrain's Pre-Trained Language Models. 
+
+* KoGPT (Korean Generative Pre-trained Transformer)
+  * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
+  * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
 
 
 ## Hardware requirements
@@ -52,6 +60,7 @@ prompt>
 ## Experiments
 
 ### In-context Few-Shots
+
 | Models        | #params | NSMC (Acc.) | YNAT (F1) | KLUE-STS (F1) |
 |:--------------|--------:|------------:|----------:|--------------:|
 | HyperCLOVA[1] |    1.3B |        83.9 |      58.7 |          60.9 |
@@ -62,21 +71,19 @@ prompt>
 | **Ours**      |    6.0B |        87.8 |  **78.0** |          64.3 |
 
 
-### Finetuning
+
+### Finetuning / P-Tuning
+
 | Models                    | #params | method       | NSMC (Acc.) | KorSTS(spearman) |
 |:--------------------------|--------:|:-------------|------------:|-----------------:|
 | SKT-AI/KoGPT-2 2.0[2]     |    125M | `finetuning` |        93.3 |             78.4 |
 | SKT-AI/KoGPT-2 Trinity[3] |    1.2B | `finetuning` |        93.2 |             83.4 |
 | HyperCLOVA[1]             |    1.3B | `p-tuning`   |        91.7 |                - |
 | HyperCLOVA[1]             |   39.0B | `p-tuning`   |        93.0 |                - |
+| **Ours**                  |    135M | `finetuning` |        95.1 |             83.0 |
 | **Ours**                  |    6.0B | `finetuning` |    **95.7** |         **85.3** |
 
-
-## References
-
-[1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
-[2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
-[3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
+We conducted this experiments using [4], with same hyperparameters.
 
 
 ## Citation
@@ -84,13 +91,20 @@ prompt>
 If you apply this library or model to any project and research, please cite our code:
 
 ```
-@article{kakaobrain2021kogpt,
+@misc{kakaobrain2021kogpt,
   title         = {KoGPT: KakaoBrain Korean(hangul) Generative Pre-Training}
   author        = {Ildoo Kim and Gunsoo Han and Jiyeon Ham and Woonhyuk Baek},
   year          = {2021},
   howpublished  = {\url{https://github.com/kakaobrain/kogpt}},
 }
 ```
+
+
+## Contact
+
+This is released as an open source in the hope that it will be helpful to many research institutes and startups for research purposes. We look forward to contacting us from various places who wish to cooperate with us. 
+
+contact@kakaobrain.com
 
 
 ## License
@@ -101,3 +115,11 @@ The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4
 카카오브레인 `KoGPT`의 `소스코드(source code)`는 [Apache 2.0](LICENSE.apache-2.0) 라이선스 하에 공개되어 있습니다.   
 카카오브레인 `KoGPT`의 `사전학습된 가중치(pretrained weights)`는 [CC-BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/) 라이선스 하에 공개되어 있습니다.   
 모델 및 코드, 사전학습된 가중치를 사용할 경우 라이선스 내용을 준수해 주십시오. 라이선스 전문은 [Apache 2.0](LICENSE.apache-2.0), [LICENSE.cc-by-nc-nd-4.0](LICENSE.cc-by-nc-nd-4.0) 파일에서 확인하실 수 있습니다.
+
+
+## References
+
+[1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
+[2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
+[3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
+[4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021)
