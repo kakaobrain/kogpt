@@ -1,5 +1,5 @@
 # KoGPT
-[![KakaoBrain](https://img.shields.io/badge/kakao-brain-ffcd00.svg)](http://kakaobrain.com/)
+[![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![License: Commercial](https://img.shields.io/badge/License-Commercial-ffcd00.svg)](LICENSE.commercial)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -7,9 +7,40 @@
 KakaoBrain Korean Generative Pre-Training Models
 
 
+## Hardware requirements
+
+### GPU
+The following is the recommended minimum GPU hardware guidance for a handful of example KoGPT.
+* half-precision requires NVIDIA GPUS based on Volta, Turing or Ampere
+* 32GB GPU RAM in the rqruied minimum memory size
+
+
 ## Usage
 
+```bash
+python -m kogpt --help
+usage: KoGPT inference [-h] [--name {kakaobrain/6B-ryan1.5b}]
+                       [--device {cpu,cuda}] [-d]
 
+KakaoBrain Korean Generative Pre-Training Model
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --name {kakaobrain/6B-ryan1.5b}
+  --device {cpu,cuda}
+  -d, --debug
+```
+
+```bash
+python -m kogpt
+prompt> 인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던
+temperature(0.8)> 
+max_length(128)> 64
+인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던 난제들을 해결할 수 있다고 믿었던 겁니다. 그리고 그의 과학적 이론은 세계 최고의 인재를 끌어모아 노벨상을 수상하며 그의 믿음을 현실화했습니다. 그런데
+
+prompt>  
+...
+```
 
 
 
@@ -27,12 +58,20 @@ KakaoBrain Korean Generative Pre-Training Models
 
 
 ### Finetuning
-| Models           | #params | method     | NSMC (Acc.) |
-|:-----------------|--------:|:-----------|------------:|
-| SKT-AI/KoGPT2[2] |    125M | `finetuning` |        93.3 |
-| HyperCLOVA[1]    |    1.3B | `p-tuning`   |        91.7 |
-| HyperCLOVA[1]    |   39.0B | `p-tuning`   |        93.0 |
-| Ours             |    6.0B | `finetuning` |    **95.7** |
+| Models                    | #params | method       | NSMC (Acc.) | KorSTS(spearman) |
+|:--------------------------|--------:|:-------------|------------:|-----------------:|
+| SKT-AI/KoGPT-2 2.0[2]     |    125M | `finetuning` |        93.3 |             78.4 |
+| SKT-AI/KoGPT-2 Trinity[3] |    1.2B | `finetuning` |        93.2 |             83.4 |
+| HyperCLOVA[1]             |    1.3B | `p-tuning`   |        91.7 |                - |
+| HyperCLOVA[1]             |   39.0B | `p-tuning`   |        93.0 |                - |
+| Ours                      |    6.0B | `finetuning` |    **95.7** |         **85.3** |
+
+
+## References
+
+[1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
+[2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
+[3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
 
 
 ## Citation
@@ -47,12 +86,6 @@ If you apply this library or model to any project and research, please cite our 
   howpublished  = {\url{https://github.com/kakaobrain/kogpt}},
 }
 ```
-
-
-## References
-
-[1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
-[2] [SKT-AI/KoGPT2](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).     
 
 
 ## License
