@@ -2,7 +2,6 @@ import os
 import logging
 from typing import Optional, Union
 
-
 import torch
 from transformers import PreTrainedTokenizerFast
 from transformers import GPTJForCausalLM
@@ -13,6 +12,7 @@ LOGGER = logging.getLogger(__name__)
 
 class KoGPTInference:
     def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], device: str = 'cuda'):
+        assert device in ('cuda', 'cpu')
         self.tokenizer = PreTrainedTokenizerFast.from_pretrained(
             pretrained_model_name_or_path,
             bos_token='[BOS]', eos_token='[EOS]', unk_token='[UNK]', pad_token='[PAD]', mask_token='[MASK]'

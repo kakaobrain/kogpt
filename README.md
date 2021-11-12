@@ -1,8 +1,9 @@
 # KoGPT
 [![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![License: Commercial](https://img.shields.io/badge/License-Commercial-ffcd00.svg)](LICENSE.commercial)
+[![#params: 6B](https://img.shields.io/badge/%23params-6B-ffcd00.svg)]()
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 
 KakaoBrain Korean Generative Pre-Training Models
 
@@ -12,7 +13,7 @@ KakaoBrain Korean Generative Pre-Training Models
 ### GPU
 The following is the recommended minimum GPU hardware guidance for a handful of example KoGPT.
 * half-precision requires NVIDIA GPUS based on Volta, Turing or Ampere
-* 32GB GPU RAM in the rqruied minimum memory size
+* 32GB GPU RAM in the required minimum memory size
 
 
 ## Usage
@@ -54,7 +55,7 @@ prompt>
 | HyperCLOVA[1] |   13.0B |        87.9 |      67.9 |          60.0 |
 | HyperCLOVA[1] |   39.0B |        88.0 |      71.4 |          61.6 |
 | HyperCLOVA[1] |   82.0B |    **88.2** |      72.7 |      **65.1** |
-| Ours          |    6.0B |        87.8 |  **78.0** |          64.3 |
+| **Ours**      |    6.0B |        87.8 |  **78.0** |          64.3 |
 
 
 ### Finetuning
@@ -64,7 +65,7 @@ prompt>
 | SKT-AI/KoGPT-2 Trinity[3] |    1.2B | `finetuning` |        93.2 |             83.4 |
 | HyperCLOVA[1]             |    1.3B | `p-tuning`   |        91.7 |                - |
 | HyperCLOVA[1]             |   39.0B | `p-tuning`   |        93.0 |                - |
-| Ours                      |    6.0B | `finetuning` |    **95.7** |         **85.3** |
+| **Ours**                  |    6.0B | `finetuning` |    **95.7** |         **85.3** |
 
 
 ## References
@@ -90,9 +91,9 @@ If you apply this library or model to any project and research, please cite our 
 
 ## License
 
-The `source code` of KakaoBrain `KoGPT` are licensed under [AGPL 3.0](LICENSE.agpl-3.0) and [Commercial](LICENSE.commercial) License.   
-The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/) License.
+The `source code` of KakaoBrain `KoGPT` are licensed under [Apache 2.0](LICENSE.apache-2.0) License.   
+The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/) License.
 
-카카오브레인 `KoGPT`의 `소스코드(source code)`는 [AGPL 3.0](LICENSE.agpl-3.0) 과 [Commercial](LICENSE.commercial) 라이선스 하에 공개되어 있습니다.   
+카카오브레인 `KoGPT`의 `소스코드(source code)`는 [Apache 2.0](LICENSE.apache-2.0) 라이선스 하에 공개되어 있습니다.   
 카카오브레인 `KoGPT`의 `사전학습된 가중치(pretrained weights)`는 [CC-BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/) 라이선스 하에 공개되어 있습니다.   
-모델 및 코드, 사전학습된 가중치를 사용할 경우 라이선스 내용을 준수해 주십시오. 라이선스 전문은 [LICENSE.agpl-3.0](LICENSE.agpl-3.0), [LICENSE.commercial](LICENSE.commercial), [LICENSE.cc-by-nc-nd-4.0](LICENSE.cc-by-nc-nd-4.0) 파일에서 확인하실 수 있습니다.
+모델 및 코드, 사전학습된 가중치를 사용할 경우 라이선스 내용을 준수해 주십시오. 라이선스 전문은 [Apache 2.0](LICENSE.apache-2.0), [LICENSE.cc-by-nc-nd-4.0](LICENSE.cc-by-nc-nd-4.0) 파일에서 확인하실 수 있습니다.
