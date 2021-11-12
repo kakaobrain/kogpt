@@ -1,10 +1,11 @@
-# KoGPT
-[![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
-[![Github: kogpt](https://img.shields.io/badge/Github-kogpt-000000.svg)](https://github.com/kakaobrain/kogpt)
-[![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+---
+language: ko
+tags:
+- gpt3
+license: cc-by-nc-nd-4.0
+---
 
+# KoGPT
 
 KakaoBrain Korean(hangul) Generative Pre-Training Models
 * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
@@ -46,7 +47,6 @@ max_length(128)> 64
 prompt>  
 ...
 ```
-
 
 
 ## Experiments

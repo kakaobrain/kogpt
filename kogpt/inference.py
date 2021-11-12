@@ -11,18 +11,18 @@ LOGGER = logging.getLogger(__name__)
 
 
 class KoGPTInference:
-    def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], device: str = 'cuda'):
+    def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], revision: str = 'main', device: str = 'cuda'):
         assert device in ('cuda', 'cpu')
         self.tokenizer = PreTrainedTokenizerFast.from_pretrained(
-            pretrained_model_name_or_path,
+            pretrained_model_name_or_path, revision=revision,
             bos_token='[BOS]', eos_token='[EOS]', unk_token='[UNK]', pad_token='[PAD]', mask_token='[MASK]'
         )
         LOGGER.debug('loaded tokenizer')
 
         model = GPTJForCausalLM.from_pretrained(
-            '/data/project/rw/gpt/pretrained_models/6B-ryan1.5b',
+            pretrained_model_name_or_path,  revision=revision,
             pad_token_id=self.tokenizer.eos_token_id,
-            revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True
+            torch_dtype=torch.float16, low_cpu_mem_usage=True
         )
         LOGGER.debug('loaded weights')
 

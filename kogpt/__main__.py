@@ -6,7 +6,7 @@ from .inference import KoGPTInference
 
 
 def cli(flags: argparse.Namespace):
-    model = KoGPTInference(flags.name, device=flags.device)
+    model = KoGPTInference(flags.model, flags.revision, device=flags.device)
 
     while True:
         prompt = input('prompt> ')
@@ -22,10 +22,11 @@ def cli(flags: argparse.Namespace):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         prog='KoGPT inference',
-        description='KakaoBrain Korean Generative Pre-Training Model'
+        description='KakaoBrain Korean(hangul) Generative Pre-Training Model'
     )
-    parser.add_argument('--name', type=str, default='kakaobrain/6B-ryan1.5b', choices=['kakaobrain/6B-ryan1.5b'])
-    parser.add_argument('--device', type=str, default='cuda', choices=['cpu', 'cuda'])
+    parser.add_argument('--model', type=str, default='kakaobrain/kogpt', help='huggingface repo (default:kakaobrain/kogpt)')
+    parser.add_argument('--revision', type=str, default='KoGPT6B-ryan1.5b', choices=['KoGPT6B-ryan1.5b'])
+    parser.add_argument('--device', type=str, default='cuda', choices=['cpu', 'cuda'], help='(default:cuda)')
 
     parser.add_argument('-d', '--debug', action='store_true')
     args = parser.parse_args()
@@ -37,4 +38,4 @@ if __name__ == '__main__':
     try:
         cli(args)
     except KeyboardInterrupt:
-        print('terminate KakaoBrain Korean Generative Pre-Training Model')
+        print('terminate KakaoBrain Korean(hangul) Generative Pre-Training Model')
