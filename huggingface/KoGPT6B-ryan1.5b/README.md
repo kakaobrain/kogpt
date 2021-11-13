@@ -20,6 +20,26 @@ KakaoBrain's Pre-Trained Language Models.
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
 
 
+## Model Descriptions
+
+### KoGPT6B-ryan1.5b
+
+* [\[huggingface\]\[kakaobrain/kogpt\]\[KoGPT6B-ryan1.5b\]](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
+
+| Hyperparameter       | Value         |
+|:---------------------|--------------:|
+| \\(n_{parameters}\\) | 6,166,502,400 |
+| \\(n_{layers}\\)     | 28            |
+| \\(d_{model}\\)      | 4,096         |
+| \\(d_{ff}\\)         | 16,384        |
+| \\(n_{heads}\\)      | 16            |
+| \\(d_{head}\\)       | 256           |
+| \\(n_{ctx}\\)        | 2,048         |
+| \\(n_{vocab}\\)      | 64,512        |
+| Positional Encoding  | [Rotary Position Embedding (RoPE)](https://arxiv.org/abs/2104.09864) |
+| RoPE Dimensions      | 64            |
+
+
 ## Hardware requirements
 
 ### GPU

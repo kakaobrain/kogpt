@@ -25,6 +25,7 @@ class KoGPTInference:
             torch_dtype=torch.float16, low_cpu_mem_usage=True
         )
         LOGGER.debug('loaded weights')
+        LOGGER.debug('#parameters: %d', sum([p.numel() for p in model.parameters()]))
 
         model.eval()
         self.model = model.to(device=device)
