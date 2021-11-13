@@ -112,7 +112,7 @@ If you apply this library or model to any project and research, please cite our 
 
 ```
 @misc{kakaobrain2021kogpt,
-  title         = {KoGPT: KakaoBrain Korean(hangul) Generative Pre-Training}
+  title         = {KoGPT: KakaoBrain Korean(hangul) Generative Pre-trained Transformer}
   author        = {Ildoo Kim and Gunsoo Han and Jiyeon Ham and Woonhyuk Baek},
   year          = {2021},
   howpublished  = {\url{https://github.com/kakaobrain/kogpt}},
