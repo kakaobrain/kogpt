@@ -1,7 +1,10 @@
 ---
 language: ko
 tags:
-- gpt3
+- KakaoBrain
+- KoGPT
+- GPT
+- GPT3
 license: cc-by-nc-nd-4.0
 ---
 
