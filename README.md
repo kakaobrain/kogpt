@@ -61,7 +61,7 @@ python -m kogpt
 prompt> 인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던
 temperature(0.8)> 
 max_length(128)> 64
-인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던 난제들을 해결할 수 있다고 믿었던 겁니다. 그리고 그의 과학적 이론은 세계 최고의 인재를 끌어모아 노벨상을 수상하며 그의 믿음을 현실화했습니다. 그런데
+인간처럼 생각하고, 행동하는 '지능'을 통해 인류가 이제까지 풀지 못했던 문제의 해답을 찾을 수 있을 것이다. 과학기술이 고도로 발달한 21세기를 살아갈 우리 아이들에게 가장 필요한 것은 사고력 훈련이다. 사고력 훈련을 통해, 세상
 
 prompt>  
 ...
@@ -133,4 +133,4 @@ The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4
 [1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
 [2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
 [3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
-[4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021)
+[4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021).
