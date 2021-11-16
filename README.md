@@ -10,6 +10,7 @@
 * KoGPT (Korean Generative Pre-trained Transformer)
   * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
+  * Web Demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/kogpt)
 
 
 ## Model Descriptions
