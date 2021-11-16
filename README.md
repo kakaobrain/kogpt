@@ -4,6 +4,7 @@
 [![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/kogpt)
 
 
 * KoGPT (Korean Generative Pre-trained Transformer)
