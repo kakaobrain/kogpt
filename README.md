@@ -4,13 +4,11 @@
 [![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/kogpt)
 
 
 * KoGPT (Korean Generative Pre-trained Transformer)
   * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
-  * Web Demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio). See demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/kogpt)
 
 
 ## Model Descriptions
@@ -169,3 +167,19 @@ The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4
 [2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
 [3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
 [4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021).
+
+
+----
+
+
+## Contribution
+
+### Disclaimer
+The contribution section is not an official KakaoBrain product.
+
+### AK391's Web Demo on Huggingface Spaces
+* see demo: https://huggingface.co/spaces/akhaliq/kogpt
+  * Web Demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio).
+  * Contributors: [AK391](https://github.com/AK391)
+
+
