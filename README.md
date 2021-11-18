@@ -172,3 +172,19 @@ The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4
 [2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
 [3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
 [4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021).
+
+
+----
+
+
+## Contribution
+
+### Disclaimer
+The contribution section is not an official KakaoBrain product.
+
+### AK391's Web Demo on Huggingface Spaces
+* see demo: https://huggingface.co/spaces/akhaliq/kogpt
+  * Web Demo is integrated to [Huggingface Spaces](https://huggingface.co/spaces) with [Gradio](https://github.com/gradio-app/gradio).
+  * Contributors: [AK391](https://github.com/AK391)
+
+
