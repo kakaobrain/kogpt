@@ -1,8 +1,9 @@
 # KoGPT
 [![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
 [![Github: kogpt](https://img.shields.io/badge/Github-kogpt-000000.svg)](https://github.com/kakaobrain/kogpt)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)   
 [![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![huggingface: KoGPT-6B](https://img.shields.io/badge/huggingface-KoGPT_6B_ryan1.5b_(float16)-ffcd00.svg)](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b-float16)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
@@ -16,6 +17,7 @@
 ### KoGPT6B-ryan1.5b
 
 * [\[huggingface\]\[kakaobrain/kogpt\]\[KoGPT6B-ryan1.5b\]](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b)
+* [\[huggingface\]\[kakaobrain/kogpt\]\[KoGPT6B-ryan1.5b-float16\]](https://huggingface.co/kakaobrain/kogpt/tree/KoGPT6B-ryan1.5b-float16)
 
 | Hyperparameter       | Value         |
 |:---------------------|--------------:|
@@ -33,10 +35,18 @@
 
 ## Hardware requirements
 
-### GPU
+### KoGPT6B-ryan1.5b
+
+#### GPU
+The following is the recommended minimum GPU hardware guidance for a handful of example KoGPT.
+* `32GB GPU RAM` in the required minimum memory size
+
+### KoGPT6B-ryan1.5b-float16
+
+#### GPU
 The following is the recommended minimum GPU hardware guidance for a handful of example KoGPT.
 * half-precision requires NVIDIA GPUS based on Volta, Turing or Ampere
-* 32GB GPU RAM in the required minimum memory size
+* `16GB GPU RAM` in the required minimum memory size
 
 
 ## Usage
@@ -75,13 +85,13 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM 
 
 tokenizer = AutoTokenizer.from_pretrained(
-  'kakaobrain/kogpt', revision='KoGPT6B-ryan1.5b',
+  'kakaobrain/kogpt', revision='KoGPT6B-ryan1.5b-float16',  # or float32 version: revision=KoGPT6B-ryan1.5b
   bos_token='[BOS]', eos_token='[EOS]', unk_token='[UNK]', pad_token='[PAD]', mask_token='[MASK]'
 )
 model = AutoModelForCausalLM.from_pretrained(
-  'kakaobrain/kogpt', revision='KoGPT6B-ryan1.5b',
+  'kakaobrain/kogpt', revision='KoGPT6B-ryan1.5b-float16',  # or float32 version: revision=KoGPT6B-ryan1.5b
   pad_token_id=tokenizer.eos_token_id,
-  torch_dtype=torch.float16, low_cpu_mem_usage=True
+  torch_dtype='auto', low_cpu_mem_usage=True
 ).to(device='cuda', non_blocking=True)
 _ = model.eval()
 
@@ -125,14 +135,23 @@ We conducted this experiments using [4], with same hyperparameters.
 
 ## Limitations
 
-KakaoBrain KoGPT was trained on `rayn dataset`, a dataset known to contain profanity, lewd, political changed, and other harsh language. Therefore, KoGPT can generate socially unacceptable texts. As with all language models, It is difficult to predict in advance how KoGPT will response to particular prompts and offensive content without warning.
+KakaoBrain `KoGPT` was trained on `rayn dataset`, a dataset known to contain profanity, lewd, political changed, and other harsh language.
+Therefore, `KoGPT` can generate socially unacceptable texts. As with all language models, It is difficult to predict in advance how `KoGPT` will response to particular prompts and offensive content without warning.
 
-Primarily Korean: koGPT is primarily trained on Korean texts, and is best for classifying, searching, summarizing or generating such texts. KoGPT by default perform worse on inputs that are different from the data distribution it is trained on, including non-Korean as well as specific dialects of Korean that are not well represented in the training data.
+Primarily Korean: `KoGPT` is primarily trained on Korean texts, and is best for classifying, searching, summarizing or generating such texts.
+`KoGPT` by default perform worse on inputs that are different from the data distribution it is trained on, including non-Korean as well as specific dialects of Korean that are not well represented in the training data.
 
-카카오브레인 `KoGPT`는 욕설, 음란, 정치적 내용 및 기타 거친 언어에 대한 처리를 하지 않은 `rayn dataset`으로 학습하였습니다. 따라서 `KoGPT`는 사회적으로 용인되지 않은 텍스트를 생성할 수 있습니다. 다른 언어 모델과 마찬가지로 특정 프롬프트와 공격적인 콘텐츠에 어떠한 결과를 생성할지 사전에 파악하기 어렵습니다.
+[comment]: <> (If abnormal or socially unacceptable text is generated during testing, please send a "prompt" and the "generated text" to [kogpt-report@kakaobrain.com]&#40;mailto:kogpt-report@kakaobrain.com&#41;.  )
 
-`KoGPT`는 주로 한국어 텍스트로 학습을 하였으며 이러한 텍스트를 분류, 검색, 요약 또는 생성하는데 가장 적합합니다. 기본적으로 `KoGPT`는 학습 데이터에 잘 나타나지 않는 방언뿐만아니라 한국어가 아닌 경우와 같이 학습 데이터에서 발견하기 어려운 입력에서 좋지 않은 성능을 보입니다.
 
+
+카카오브레인 `KoGPT`는 욕설, 음란, 정치적 내용 및 기타 거친 언어에 대한 처리를 하지 않은 `rayn dataset`으로 학습하였습니다.
+따라서 `KoGPT`는 사회적으로 용인되지 않은 텍스트를 생성할 수 있습니다. 다른 언어 모델과 마찬가지로 특정 프롬프트와 공격적인 콘텐츠에 어떠한 결과를 생성할지 사전에 파악하기 어렵습니다.
+
+`KoGPT`는 주로 한국어 텍스트로 학습을 하였으며 이러한 텍스트를 분류, 검색, 요약 또는 생성하는데 가장 적합합니다.
+기본적으로 `KoGPT`는 학습 데이터에 잘 나타나지 않는 방언뿐만아니라 한국어가 아닌 경우와 같이 학습 데이터에서 발견하기 어려운 입력에서 좋지 않은 성능을 보입니다.
+
+[comment]: <> (테스트중에 발생한 비정상적인 혹은 사회적으로 용인되지 않는 텍스트가 생성된 경우 [kogpt-report@kakaobrain.com]&#40;mailto:kogpt-report@kakaobrain.com&#41;로 "prompt"와 "생성된 문장"을 함께 보내주시기 바랍니다.)
 
 
 ## Citation
@@ -153,7 +172,7 @@ If you apply this library or model to any project and research, please cite our 
 
 This is released as an open source in the hope that it will be helpful to many research institutes and startups for research purposes. We look forward to contacting us from various places who wish to cooperate with us. 
 
-contact@kakaobrain.com
+[contact@kakaobrain.com](mailto:contact@kakaobrain.com)
 
 
 ## License

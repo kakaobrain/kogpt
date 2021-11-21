@@ -22,7 +22,7 @@ class KoGPTInference:
         model = GPTJForCausalLM.from_pretrained(
             pretrained_model_name_or_path,  revision=revision,
             pad_token_id=self.tokenizer.eos_token_id,
-            torch_dtype=torch.float16, low_cpu_mem_usage=True
+            torch_dtype='auto', low_cpu_mem_usage=True
         )
         LOGGER.debug('loaded weights')
         LOGGER.debug('#parameters: %d', sum([p.numel() for p in model.parameters()]))

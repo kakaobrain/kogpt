@@ -25,7 +25,7 @@ if __name__ == '__main__':
         description='KakaoBrain Korean(hangul) Generative Pre-Training Model'
     )
     parser.add_argument('--model', type=str, default='kakaobrain/kogpt', help='huggingface repo (default:kakaobrain/kogpt)')
-    parser.add_argument('--revision', type=str, default='KoGPT6B-ryan1.5b', choices=['KoGPT6B-ryan1.5b'])
+    parser.add_argument('--revision', type=str, default='KoGPT6B-ryan1.5b-float16', choices=['KoGPT6B-ryan1.5b', 'KoGPT6B-ryan1.5b-float16'], help='(default:KoGPT6B-ryan1.5b-float16)')
     parser.add_argument('--device', type=str, default='cuda', choices=['cpu', 'cuda'], help='(default:cuda)')
 
     parser.add_argument('-d', '--debug', action='store_true')
