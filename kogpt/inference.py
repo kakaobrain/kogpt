@@ -11,7 +11,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 class KoGPTInference:
-    def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], revision: str = 'main', device: str = 'cuda'):
+    def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], revision: str = 'KoGPT6B-ryan1.5b-float16', device: str = 'cuda'):
         assert device in ('cuda', 'cpu')
         self.tokenizer = PreTrainedTokenizerFast.from_pretrained(
             pretrained_model_name_or_path, revision=revision,
