@@ -146,7 +146,7 @@ Therefore, `KoGPT` can generate socially unacceptable texts. As with all languag
 Primarily Korean: `KoGPT` is primarily trained on Korean texts, and is best for classifying, searching, summarizing or generating such texts.
 `KoGPT` by default perform worse on inputs that are different from the data distribution it is trained on, including non-Korean as well as specific dialects of Korean that are not well represented in the training data.
 
-[comment]: <> (If abnormal or socially unacceptable text is generated during testing, please send a "prompt" and the "generated text" to [kogpt-report@kakaobrain.com]&#40;mailto:kogpt-report@kakaobrain.com&#41;.  )
+If abnormal or socially unacceptable text is generated during testing, please send a "prompt" and the "generated text" to [opensource+kogpt@kakaobrain.com](mailto:opensource+kogpt@kakaobrain.com).  
 
 
 
@@ -156,7 +156,7 @@ Primarily Korean: `KoGPT` is primarily trained on Korean texts, and is best for 
 `KoGPT`는 주로 한국어 텍스트로 학습을 하였으며 이러한 텍스트를 분류, 검색, 요약 또는 생성하는데 가장 적합합니다.
 기본적으로 `KoGPT`는 학습 데이터에 잘 나타나지 않는 방언뿐만아니라 한국어가 아닌 경우와 같이 학습 데이터에서 발견하기 어려운 입력에서 좋지 않은 성능을 보입니다.
 
-[comment]: <> (테스트중에 발생한 비정상적인 혹은 사회적으로 용인되지 않는 텍스트가 생성된 경우 [kogpt-report@kakaobrain.com]&#40;mailto:kogpt-report@kakaobrain.com&#41;로 "prompt"와 "생성된 문장"을 함께 보내주시기 바랍니다.)
+테스트중에 발생한 비정상적인 혹은 사회적으로 용인되지 않는 텍스트가 생성된 경우 [opensource+kogpt@kakaobrain.com](mailto:opensource+kogpt@kakaobrain.com)로 "prompt"와 "생성된 문장"을 함께 보내주시기 바랍니다.
 
 
 ## Citation
