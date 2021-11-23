@@ -13,6 +13,9 @@ def cli(flags: argparse.Namespace):
         if not prompt:
             continue
         temperature = float(input('temperature(0.8)> ') or '0.8')
+        if temperature <= 0.0:
+            print('temperature has to be positive')
+            continue
         max_length = int(input('max_length(128)> ') or '128')
         generated = model.generate(prompt, temperature, max_length)
         print(f'{generated}')
