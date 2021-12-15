@@ -184,6 +184,12 @@ The `pretrained weights` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4
 카카오브레인 `KoGPT`의 `사전학습된 가중치(pretrained weights)`는 [CC-BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/) 라이선스 하에 공개되어 있습니다.   
 모델 및 코드, 사전학습된 가중치를 사용할 경우 라이선스 내용을 준수해 주십시오. 라이선스 전문은 [Apache 2.0](LICENSE.apache-2.0), [LICENSE.cc-by-nc-nd-4.0](LICENSE.cc-by-nc-nd-4.0) 파일에서 확인하실 수 있습니다.
 
+### Obligation to use
+
+While Open Source software may be free to use, that does not mean it is free of obligation. To determine whether your intended use of KoGPT is suitable for the Apache 2.0 (or CC-BY-NC-ND 4.0), please consider the license guide. If you violate the license, you may be subject to legal action such as prohibition of use or claim for damages depending on the use.
+
+오픈소스 소프트웨어는 무료로 사용할 수 있지만 이것이 의무가 없다는 의미는 아닙니다. KoGPT의 사용에 앞서 라이선스 가이드를 살펴보고 예정한 사용이 Apache 2.0 (또는 CC-BY-NC-ND 4.0)를 준수하는지 여부를 먼저 확인하시기 바랍니다. 라이선스를 위반하는 경우, 내용에 따라 사용금지, 손해배상 청구 등의 법적 조치를 취할 수 있습니다.
+
 
 ## References
 
