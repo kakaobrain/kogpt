@@ -135,7 +135,7 @@ We conducted this experiments using [4], with same hyperparameters.
 
 ## Limitations
 
-KakaoBrain `KoGPT` was trained on `rayn dataset`, a dataset known to contain profanity, lewd, political changed, and other harsh language.
+KakaoBrain `KoGPT` was trained on raw data, a dataset known to contain profanity, lewd, political changed, and other harsh language.
 Therefore, `KoGPT` can generate socially unacceptable texts. As with all language models, It is difficult to predict in advance how `KoGPT` will response to particular prompts and offensive content without warning.
 
 Primarily Korean: `KoGPT` is primarily trained on Korean texts, and is best for classifying, searching, summarizing or generating such texts.
@@ -145,12 +145,13 @@ If abnormal or socially unacceptable text is generated during testing, please se
 
 
 
-카카오브레인 `KoGPT`는 욕설, 음란, 정치적 내용 및 기타 거친 언어에 대한 처리를 하지 않은 `rayn dataset`으로 학습하였습니다.
+카카오브레인 `KoGPT`는 AI커뮤니티를 위한 연구용으로 욕설, 음란, 정치적 내용 및 기타 거친 언어에 대한 처리를 하지 않은 원시 데이터로 학습하였습니다.
 따라서 `KoGPT`는 사회적으로 용인되지 않은 텍스트를 생성할 수 있습니다. 다른 언어 모델과 마찬가지로 특정 프롬프트와 공격적인 콘텐츠에 어떠한 결과를 생성할지 사전에 파악하기 어렵습니다.
 
 `KoGPT`는 주로 한국어 텍스트로 학습을 하였으며 이러한 텍스트를 분류, 검색, 요약 또는 생성하는데 가장 적합합니다.
 기본적으로 `KoGPT`는 학습 데이터에 잘 나타나지 않는 방언뿐만아니라 한국어가 아닌 경우와 같이 학습 데이터에서 발견하기 어려운 입력에서 좋지 않은 성능을 보입니다.
 
+본 KoGPT를 활용한 연구, 개발, 테스트 등에 있어 위의 부분을 꼭 유의하시기 바랍니다.  
 테스트중에 발생한 비정상적인 혹은 사회적으로 용인되지 않는 텍스트가 생성된 경우 [opensource+kogpt@kakaobrain.com](mailto:opensource+kogpt@kakaobrain.com)로 "prompt"와 "생성된 문장"을 함께 보내주시기 바랍니다.
 
 
