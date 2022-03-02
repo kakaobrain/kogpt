@@ -121,16 +121,11 @@ print(generated)  # print: 인간처럼 생각하고, 행동하는 '지능'을 �
 
 ### Finetuning / P-Tuning
 
-| Models                    | #params | method       | NSMC (Acc.) | KorSTS(spearman) |
-|:--------------------------|--------:|:-------------|------------:|-----------------:|
-| SKT-AI/KoGPT-2 2.0[2]     |    125M | `finetuning` |        93.3 |             78.4 |
-| SKT-AI/KoGPT-2 Trinity[3] |    1.2B | `finetuning` |        93.2 |             83.4 |
-| HyperCLOVA[1]             |    1.3B | `p-tuning`   |        91.7 |                - |
-| HyperCLOVA[1]             |   39.0B | `p-tuning`   |        93.0 |                - |
-| **Ours**                  |    135M | `finetuning` |        95.1 |             83.0 |
-| **Ours**                  |    6.0B | `finetuning` |    **95.7** |         **85.3** |
+We have been reported to have issues(https://github.com/kakaobrain/kogpt/issues/17) with our downstream evaluation.
 
-We conducted this experiments using [4], with same hyperparameters.
+The previously published performance evaluation table was deleted because it was difficult to see it as a fair comparison because the comparison target algorithm was different and the performance measurement method could not be confirmed.
+
+You can refer to the above issue link for the existing performance evaluation table and troubleshooting results.
 
 
 ## Limitations
@@ -196,8 +191,7 @@ While Open Source software may be free to use, that does not mean it is free of 
 
 [1] [HyperCLOVA](https://arxiv.org/abs/2109.04650): Kim, Boseop, et al. "What changes can large-scale language models bring? intensive study on hyperclova: Billions-scale korean generative pretrained transformers." arXiv preprint arXiv:2109.04650 (2021).   
 [2] [SKT-AI/KoGPT-2 2.0](https://github.com/SKT-AI/KoGPT2): "SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)." https://github.com/SKT-AI/KoGPT2 (2021).   
-[3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).   
-[4] [KoGPT2-subtasks](https://github.com/haven-jeon/KoGPT2-subtasks): "KoGPT2 v2.0 한국어 평가 모듈" https://github.com/haven-jeon/KoGPT2-subtasks (2021).
+[3] [SKT-AI/KoGPT-2 Trinity](https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5): "Ko-GPT-Trinity 1.2B." https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5 (2021).
 
 
 ----
