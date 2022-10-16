@@ -11,7 +11,13 @@ LOGGER = logging.getLogger(__name__)
 
 
 class KoGPTInference:
-    def __init__(self, pretrained_model_name_or_path: Optional[Union[str, os.PathLike]], revision: str = 'KoGPT6B-ryan1.5b-float16', device: str = 'cuda'):
+    def __init__(
+            self,
+            pretrained_model_name_or_path: Optional[Union[str, os.PathLike]],
+            revision: str = 'KoGPT6B-ryan1.5b-float16',
+            device: str = 'cuda',
+            model_parallel: bool = False,
+    ):
         assert device in ('cuda', 'cpu')
         self.tokenizer = PreTrainedTokenizerFast.from_pretrained(
             pretrained_model_name_or_path, revision=revision,
@@ -19,17 +25,21 @@ class KoGPTInference:
         )
         LOGGER.debug('loaded tokenizer')
 
-        model = GPTJForCausalLM.from_pretrained(
+        self.model = GPTJForCausalLM.from_pretrained(
             pretrained_model_name_or_path,  revision=revision,
             pad_token_id=self.tokenizer.eos_token_id,
             torch_dtype='auto', low_cpu_mem_usage=True
         )
         LOGGER.debug('loaded weights')
-        LOGGER.debug('#parameters: %d', sum([p.numel() for p in model.parameters()]))
+        LOGGER.debug('#parameters: %d', sum([p.numel() for p in self.model.parameters()]))
 
-        model.eval()
-        self.model = model.to(device=device)
+        self.model.eval()
         self.device = device
+        if self.device == 'cpu':
+            self.model.cpu()
+            return
+        if model_parallel:
+            self.model.parallelize()
 
     def generate(self, prompt: str, temperature: float, max_length: int = 128) -> str:
         LOGGER.debug('prompt:%s, temperature:%f, max_length:%d', prompt, temperature, max_length)
