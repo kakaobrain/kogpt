@@ -6,7 +6,8 @@ from .inference import KoGPTInference
 
 
 def cli(flags: argparse.Namespace):
-    model = KoGPTInference(flags.model, flags.revision, device=flags.device)
+    model = KoGPTInference(flags.model, flags.revision, device=flags.device,
+                           model_parallel=flags.model_parallel)
 
     while True:
         prompt = input('prompt> ')
@@ -30,6 +31,7 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, default='kakaobrain/kogpt', help='huggingface repo (default:kakaobrain/kogpt)')
     parser.add_argument('--revision', type=str, default='KoGPT6B-ryan1.5b-float16', choices=['KoGPT6B-ryan1.5b', 'KoGPT6B-ryan1.5b-float16'], help='(default:KoGPT6B-ryan1.5b-float16)')
     parser.add_argument('--device', type=str, default='cuda', choices=['cpu', 'cuda'], help='(default:cuda)')
+    parser.add_argument('--model_parallel', action='store_true', help='distribute the model across multiple GPUs')
 
     parser.add_argument('-d', '--debug', action='store_true')
     args = parser.parse_args()
