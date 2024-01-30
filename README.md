@@ -1,4 +1,4 @@
-# KoGPT
+# KakaoBrain project KoGPT
 [![KakaoBrain](https://img.shields.io/badge/Kakao-Brain-ffcd00.svg)](http://kakaobrain.com/)
 [![Github: kogpt](https://img.shields.io/badge/Github-kogpt-000000.svg)](https://github.com/kakaobrain/kogpt)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)   
@@ -7,7 +7,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
-* KoGPT (Korean Generative Pre-trained Transformer)
+* KakaoBrain project KoGPT (Korean Generative Pre-trained Transformer)
   * [https://github.com/kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
   * [https://huggingface.co/kakaobrain/kogpt](https://huggingface.co/kakaobrain/kogpt)
 
