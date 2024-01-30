@@ -21,14 +21,14 @@
 
 | Hyperparameter       | Value         |
 |:---------------------|--------------:|
-| <img src="https://render.githubusercontent.com/render/math?math=n_{parameters}"> | 6,166,502,400 |
-| <img src="https://render.githubusercontent.com/render/math?math=n_{layers}">     | 28            |
-| <img src="https://render.githubusercontent.com/render/math?math=d_{model}">      | 4,096         |
-| <img src="https://render.githubusercontent.com/render/math?math=d_{ff}">         | 16,384        |
-| <img src="https://render.githubusercontent.com/render/math?math=n_{heads}">      | 16            |
-| <img src="https://render.githubusercontent.com/render/math?math=d_{head}">       | 256           |
-| <img src="https://render.githubusercontent.com/render/math?math=n_{ctx}">        | 2,048         |
-| <img src="https://render.githubusercontent.com/render/math?math=n_{vocab}">      | 64,512        |
+| $n_{parameters}$     | 6,166,502,400 |
+| $n_{layers}$         | 28            |
+| $d_{model}$          | 4,096         |
+| $d_{ff}$             | 16,384        |
+| $n_{heads}$          | 16            |
+| $d_{head}$           | 256           |
+| $n_{ctx}$            | 2,048         |
+| $n_{vocab}$          | 64,512        |
 | Positional Encoding  | [Rotary Position Embedding (RoPE)](https://arxiv.org/abs/2104.09864) |
 | RoPE Dimensions      | 64            |
 
